@@ -22,8 +22,8 @@ def navigate_to_month(driver, month, year, person_id):
 def retrieve_tempo_lavoro_values(driver):
     # Wait for the main table to load
     main_table = driver.find_element(By.ID,
-                                     "tabellonetimbrature")  # Replace "tabellonetimbrature" with the actual ID of the main table
-    rows = main_table.find_elements(By.TAG_NAME, "tr")[1:]  # Start from the second row
+                                     "tabellonetimbrature")  # "tabellonetimbrature" = main table id
+    rows = main_table.find_elements(By.TAG_NAME, "tr")[1:]  # Start from the second row (skip header go to first day)
 
     data = []
 
